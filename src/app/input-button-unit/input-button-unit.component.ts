@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
       The title is: {{ title }}
     </p>
 
-    <input [value]="title">
+    <input [value]="title"
+           (keyup)="changeTitle($event.target.value)">
     <button (click)="changeTitle('Button Clicked!')">
       Save
     </button>
